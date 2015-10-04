@@ -1,0 +1,33 @@
+gapdata <- read.table("output/combined_gapMinder.tsv", sep = "\t", header = TRUE )  
+
+Germanydata <- subset(gapdata, country == "Germany")
+
+plot (
+      y = Germanydata$gdpPercap,
+      x = Germanydata$year,
+      xlab = "Year",
+      ylab = "GDP per capita",
+      main = "GDP change for Germany"
+      )
+
+Mexicodata <- subset(gapdata, country == "Mexico")
+
+plot (
+      y = Mexicodata$gdpPercap,
+      x = Mexicodata$year,
+      xlab = "Year",
+      ylab = "GDP per capita",
+      main = "GDP change for Mexico"
+      )
+
+Brazildata <- subset(gapdata, country == "Brazil")
+
+plot (
+      y = Brazildata$gdpPercap,
+      x = Brazildata$year,
+      xlab = "Year",
+      ylab = "GDP per capita",
+      main = "GDP change for Brazil"
+      )
+
+
