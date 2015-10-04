@@ -30,4 +30,12 @@ plot (
       main = "GDP change for Brazil"
       )
 
+# Mean for life expectancy
+gapdata %>%
+select(lifeExp, continent) %>%
+group_by(continent) %>%
+summarise(mean = mean(lifeExp))
+summarise(min = min(lifeExp))
 
+# Min and max
+summarise(min = min(lifeExp))
